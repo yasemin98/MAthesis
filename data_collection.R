@@ -401,6 +401,12 @@ data_broad <- filter_dataset(dataset_unfiltered, list_broad)
 data_intermediate <- filter_dataset(dataset_unfiltered, list_intermediate)
 data_specific <- filter_dataset(dataset_unfiltered, list_specific)
 
+write.csv(data_specific, file = "dataset specific.csv", row.names = FALSE)
+write.csv(data_intermediate, file = "dataset intermediate.csv", row.names = FALSE)
+write.csv(data_broad, file = "dataset broad.csv", row.names = FALSE)
+
+### final dataset ####
+
 # inspect duplicates based on text variable
 duplicates_broad <- data_broad[duplicated(data_broad$text) | duplicated(data_broad$text, fromLast = TRUE), ]
 duplicates_broad <- unique(duplicates_broad) #keeping only 1 instance of the duplicates
@@ -422,8 +428,30 @@ instances_in_specific_not_in_intermediate <- setdiff(data_specific$text, data_in
 instances_unique_to_intermediate <- data_intermediate[data_intermediate$text %in% instances_in_intermediate_not_in_broad, ]
 instances_unique_to_specific <- data_specific[data_specific$text %in% instances_in_specific_not_in_intermediate, ]
 
-# Assuming you want to print the 10th row of your dataset
+
 print(instances_unique_to_intermediate[instances_unique_to_intermediate$id_fact == "884602", ])
+
+
+# filter out instances containing the phrase "antwoord op vraag"
+filtered_df <- data_specific %>% 
+  filter(!grepl("antwoord op vraag", text) 
+         & !grepl("antwoord  op vraag", text)
+         & !grepl("antwoord ,  op vraag", text)
+         & !grepl("antwoord , op vraag", text)
+         & !grepl("antwoord  ,  op vraag", text))
+
+nrow(filtered_df)
+
+# filtering duplicates based on exact same "text" value
+duplicates <- filtered_df[duplicated(filtered_df$text) | duplicated(filtered_df$text, fromLast = TRUE), ]
+duplicates <- unique(duplicates) #keeping only 1 instance of the duplicates
+
+# removing one instance of the duplicates 
+final_df <- distinct(filtered_df, text)
+nrow(final_df)
+# save as CSV
+write.csv(final_df, file = "final dataset.csv", row.names = FALSE)
+
 
 ## DEBUGGING ####
 
