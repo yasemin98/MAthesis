@@ -1,18 +1,39 @@
 # Master Thesis 
 
-This is the repository for my Master of Statistics and Data Science thesis at KU Leuven. 
-
 ## Table of Contents
 
-1. [Data Collection](#data-collection)
-2. [Preprocessing](#preprocessing)
-3. [Modeling](#modeling)
-4. [Documentation](#documentation)
+- [Introduction](#introduction)
+- [Data Collection](#data-collection)
+- [Preprocessing](#preprocessing)
+- [Modeling](#modeling)
+- [Repository](#repository)
+- [Resources](#resources)
 
-### 1. Data Collection
+--- 
 
-### 2. Preprocessing
+## Introduction
+This is the repository for my Master of Statistics and Data Science thesis at KU Leuven. 
 
-### 3. Modeling
 
-### 4. Documentation
+
+## Data Collection
+
+info about data collection using Flempar
+
+---
+
+## Preprocessing
+
+info about preprocessing the text data
+
+--- 
+
+## Modeling
+
+info about modeling
+
+---
+
+## Resources
+
+links to resources
