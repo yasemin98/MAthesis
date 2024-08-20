@@ -1,7 +1,14 @@
 # DATA COLLECTION with Flempar ####
 
-## set working directory ####
+## references ####
 
+# 1. Willems, E., & Heylen, F. (2023). flempar: An R-package for analyzing data
+# from the Flemish Parliament. https://doi.org/10.31235/osf.io/7qwvt
+
+# 2. OpenAI. (2023). GPT-4 Language Model. https://openai.com/research/gpt-4
+
+
+## set working directory ####
 getwd()
 setwd("C:/Users/yasem/Desktop/THESIS/data/")
 
@@ -36,6 +43,7 @@ library(doconv)
 #remove.packages("cli")
 #install.packages("cli")
 library(tidyverse)
+
 ## set paths ####
 
 # I set a path for the written questions (path_doc) and the details (path_details)
@@ -46,7 +54,7 @@ path_details <-
 ## set time period ####
 
 # I create a df with start- and end-dates 
-# I collect data from 1995-2024
+# I collect parliamentary data from 1995-2024
 data.frame(datum_start= seq(ymd("1995-03-01"),
                             ymd("2024-05-01"),
                             by = 182)) %>% # you can edit the number of days in interval, here it's half a year
