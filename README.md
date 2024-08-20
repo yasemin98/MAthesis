@@ -1,39 +1,15 @@
-# Master Thesis 
+# Github Repository for Master Thesis 
+This is the repository for my Master Thesis for the Master's programme in Statistics and Data Science thesis @ KU Leuven.
 
-## Table of Contents
+Thesis title: Exploring LGBTQI+ Topics in Flemish Parliamentary Questions: A Structural Topic Modeling Approach
+Author: Yasemin Uslu
+ 
+## Contents
 
-- [Introduction](#introduction)
-- [Data Collection](#data-collection)
-- [Preprocessing](#preprocessing)
-- [Modeling](#modeling)
-- [Repository](#repository)
-- [Resources](#resources)
+- CHES_dataset.csv: Chapel Hill Expert Survey dataset containing galtan measure
+- data_collection.R: code used for retrieving the data
+- df_final2.csv: final dataset used for structural topic modeling
+- Preprocessing.ipynb: code for (part of the) preprocessing
+- questions_MP.csv: dataset containing MP data
+- stm_model.R: code for textual preprocessing and structural topic modeling
 
---- 
-
-## Introduction
-This is the repository for my Master of Statistics and Data Science thesis at KU Leuven. 
-
-
-
-## Data Collection
-
-info about data collection using Flempar
-
----
-
-## Preprocessing
-
-info about preprocessing the text data
-
---- 
-
-## Modeling
-
-info about modeling
-
----
-
-## Resources
-
-links to resources
